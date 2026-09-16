@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chinenye N. | Nursing Portfolio</title>
+<style>
+:root{
+    --sage:#9CAF88;
+    --sage-light:#EEF4EA;
+    --pink:#F4D7DF;
+    --pink-light:#FCF4F6;
+    --text:#2F2F2F;
+    --white:#FFFFFF;
+    --shadow:0 4px 16px rgba(0,0,0,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fafafa;
+    color:var(--text);
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    background:linear-gradient(135deg,var(--pink-light),var(--sage-light));
+    padding:80px 0;
+}
+
+.hero{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.hero-text{
+    flex:1;
+    min-width:280px;
+}
+
+.hero-text h1{
+    font-size:3rem;
+    color:#385038;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    font-size:1.15rem;
+    max-width:650px;
+}
+
+.photo-area{
+    flex:0 0 220px;
+    display:flex;
+    justify-content:center;
+}
+
+.initials-circle{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background:var(--sage);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:4rem;
+    font-weight:bold;
+    box-shadow:var(--shadow);
+}
+
+.profile-photo{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:50%;
+    box-shadow:var(--shadow);
+}
+
+section{
+    padding:70px 0;
+}
+
+h2{
+    font-size:2rem;
+    color:#385038;
+    margin-bottom:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:var(--shadow);
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    border-top:5px solid var(--sage);
+    font-weight:bold;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.portfolio-card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:var(--shadow);
+    border-left:6px solid var(--pink);
+}
+
+.contact-card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:var(--shadow);
+}
+
+footer{
+    background:var(--sage);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media (max-width:768px){
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:2.3rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container hero">
+
+        <div class="hero-text">
+            <h1>Chinenye N.</h1>
+            <p>
+                I am a nursing student passionate about patient advocacy and maternal child health.
+            </p>
+        </div>
+
+        <div class="photo-area">
+
+            <!-- CHANGE THE NEXT LINE TO:
+            <img src="photo.jpg" alt="Chinenye N." class="profile-photo">
+            TO DISPLAY YOUR PHOTO INSTEAD OF THE INITIALS -->
+            <div class="initials-circle">CN</div>
+
+        </div>
+
+    </div>
+</header>
+
+<section>
+    <div class="container">
+
+        <h2>About Me</h2>
+
+        <div class="card">
+
+            <p>
+                I am a Nursing student expected to graduate in December 2026. I chose nursing because it combines science, compassion, and service, allowing me to make a meaningful difference in people's lives through patient advocacy while promoting the health and well-being of individuals, children, families, and communities.
+            </p>
+
+            <br>
+
+            <p>
+                I care most about maternal and child mortality, particularly among minority populations, because many of these deaths are preventable and are often linked to health disparities, inequitable access to care, and social determinants of health. I am passionate about helping improve outcomes for mothers and children through advocacy, education, and quality healthcare.
+            </p>
+
+            <br>
+
+            <p>
+                I am working toward a career as a Labor and Delivery Nurse, with plans to pursue a Doctor of Nursing Practice (DNP) focused on maternal-child health or midwifery. My long-term goal is to support mothers and infants through high-quality, compassionate care while helping improve maternal health outcomes.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<section style="background:var(--pink-light);">
+    <div class="container">
+
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                Compassionate Care
+            </div>
+
+            <div class="skill-card">
+                Patient Advocacy
+            </div>
+
+            <div class="skill-card">
+                Communication
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2>PH 320 Portfolio — Applied Biostatistics in Public Health, York College CUNY</h2>
+
+        <div class="portfolio-grid">
+
+            <!-- ADD YOUR WEEK 3 LINK HERE LATER -->
+            <div class="portfolio-card">
+                <h3>Week 3</h3>
+                <p>Coming soon.</p>
+            </div>
+
+            <!-- ADD YOUR WEEK 4 LINK HERE LATER -->
+            <div class="portfolio-card">
+                <h3>Week 4</h3>
+                <p>Coming soon.</p>
+            </div>
+
+            <!-- ADD YOUR WEEK 5 LINK HERE LATER -->
+            <div class="portfolio-card">
+                <h3>Week 5</h3>
+                <p>Coming soon.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section style="background:var(--sage-light);">
+    <div class="container">
+
+        <h2>Contact</h2>
+
+        <div class="contact-card">
+            <p>No contact information provided.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Chinenye N. | Nursing Portfolio</p>
+</footer>
+
+</body>
+</html>
