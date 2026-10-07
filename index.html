@@ -34,6 +34,25 @@ body{
     margin:auto;
 }
 
+nav{
+    background:white;
+    box-shadow:var(--shadow);
+}
+
+nav .container{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:30px;
+    padding:15px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+}
+
 header{
     background:linear-gradient(135deg,var(--pink-light),var(--sage-light));
     padding:80px 0;
@@ -56,6 +75,14 @@ header{
     font-size:3rem;
     color:#385038;
     margin-bottom:15px;
+}
+
+.hero-text .subtitle{
+    font-size:0.85rem;
+    color:#4e4e4e;
+    margin-bottom:20px;
+    font-style:normal;
+    line-height:1.5;
 }
 
 .hero-text p{
@@ -138,6 +165,11 @@ h2{
     border-left:6px solid var(--pink);
 }
 
+.portfolio-card a{
+    text-decoration:none;
+    color:inherit;
+}
+
 .contact-card{
     background:white;
     padding:25px;
@@ -161,16 +193,31 @@ footer{
     .hero-text h1{
         font-size:2.3rem;
     }
+
+    nav .container{
+        flex-direction:column;
+        gap:15px;
+    }
 }
 </style>
 </head>
 <body>
+
+<nav>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="cross-sectional.html">What cross-sectional data can and cannot tell you?</a>
+    </div>
+</nav>
 
 <header>
     <div class="container hero">
 
         <div class="hero-text">
             <h1>Chinenye N.</h1>
+            <div class="subtitle">
+                PH 320: Why is frequent mental distress higher in Jamaica than in most of New York City - and how would we know that's really true?
+            </div>
             <p>
                 I am a nursing student passionate about patient advocacy and maternal child health.
             </p>
@@ -255,8 +302,10 @@ footer{
 
             <!-- ADD YOUR WEEK 4 LINK HERE LATER -->
             <div class="portfolio-card">
-                <h3>Week 4</h3>
-                <p>Coming soon.</p>
+                <a href="cross-sectional.html">
+                    <h3>Week 4</h3>
+                    <p>What cross-sectional data can and cannot tell you?</p>
+                </a>
             </div>
 
             <!-- ADD YOUR WEEK 5 LINK HERE LATER -->
