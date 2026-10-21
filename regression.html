@@ -12,6 +12,8 @@
       --muted: #5c5c5c;
       --line: #d9d9d5;
       --link: #2e4d6b;
+      --code: #4a4a4a;
+      --accent: #b9893a;
     }
 
     * {
@@ -52,6 +54,74 @@
       margin: 0 0 18px;
       font-size: 1rem;
       color: var(--text);
+    }
+
+    .table-block {
+      margin: 24px 0 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.35);
+      padding: 8px 12px 12px;
+      overflow-x: auto;
+    }
+
+    .regression-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.92rem;
+      color: var(--code);
+      background: transparent;
+    }
+
+    .regression-table th,
+    .regression-table td {
+      padding: 8px 10px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .regression-table thead th {
+      font-weight: 600;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .regression-table tbody tr {
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .regression-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .regression-table .label {
+      font-style: normal;
+    }
+
+    .regression-table .numeric {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 0 0 10px;
+      border-bottom: 2px solid #403d38;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      color: var(--text);
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .meta strong {
+      font-weight: 700;
+    }
+
+    .meta .r {
+      color: var(--accent);
+      font-weight: 700;
     }
 
     img {
@@ -102,6 +172,47 @@
     <p>The correlation is +0.77, which is positive and strong.</p>
     <p>For every 1 percentage point increase in smoking_pct, distress_pct goes up about 0.4912 percentage points.</p>
     <p>The p-value is less than 0.001, which is less than 0.05, so this relationship is statistically significant.</p>
+
+    <div class="table-block">
+      <div class="meta">
+        <strong>Table 3 · smoking_pct</strong>
+        <span class="r">r = +0.77</span>
+      </div>
+
+      <table class="regression-table" aria-label="Regression output table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>coef</th>
+            <th>std err</th>
+            <th>t</th>
+            <th>P&gt;|t|</th>
+            <th>[0.025</th>
+            <th>0.975]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="label">Intercept</td>
+            <td class="numeric">9.7599</td>
+            <td class="numeric">0.370</td>
+            <td class="numeric">26.356</td>
+            <td class="numeric">0.000</td>
+            <td class="numeric">9.029</td>
+            <td class="numeric">10.491</td>
+          </tr>
+          <tr>
+            <td class="label">smoking_pct</td>
+            <td class="numeric">0.4912</td>
+            <td class="numeric">0.032</td>
+            <td class="numeric">15.315</td>
+            <td class="numeric">0.000</td>
+            <td class="numeric">0.428</td>
+            <td class="numeric">0.555</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <img src="table.png" alt="Regression output table">
 
