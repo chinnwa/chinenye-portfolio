@@ -1,108 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What cross-sectional data can and cannot tell you?</title>
-<style>
-body {
-margin: 0;
-padding: 0;
-background: #ffffff;
-color: #222222;
-font-family: Georgia, "Times New Roman", serif;
-line-height: 1.8;
-font-size: 1.1rem;
-}
- 
-.container {
-max-width: 700px;
-margin: 0 auto;
-padding: 2rem 1.5rem 3rem;
-}
- 
-h1 {
-font-size: 2rem;
-line-height: 1.3;
-margin-bottom: 2rem;
-font-weight: 700;
-}
- 
-p {
-margin-bottom: 1.5rem;
-}
- 
-.quote {
-margin-bottom: 2rem;
-}
- 
-.attribution {
-text-align: right;
-margin-top: -0.5rem;
-margin-bottom: 2rem;
-}
- 
-footer {
-margin-top: 3rem;
-padding-top: 1rem;
-border-top: 1px solid #dddddd;
-font-size: 0.85rem;
-color: #555555;
-}
- 
-footer p {
-margin: 0.5rem 0;
-}
- 
-.changes {
-margin-top: 2rem;
-}
- 
-a {
-color: #1a5fb4;
-}
- 
-@media (max-width: 600px) {
-body {
-font-size: 1rem;
-}
- 
-h1 {
-font-size: 1.7rem;
-}
- 
-.container {
-padding: 1.5rem 1rem 2rem;
-}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What cross-sectional data can and cannot tell you?</title>
+  <style>
+    :root{
+      --sage:#9CAF88;
+      --sage-light:#EEF4EA;
+      --pink:#F4D7DF;
+      --pink-light:#FCF4F6;
+      --text:#2F2F2F;
+      --bg:#fafafa;
+      --paper:#FFFFFF;
+      --muted:#4e4e4e;
+      --shadow:0 4px 16px rgba(0,0,0,0.08);
+      --line:#d9d9d9;
+    }
+
+    * { box-sizing:border-box; }
+
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Arial, Helvetica, sans-serif;
+      line-height:1.8;
+    }
+
+    .page-shell {
+      max-width:860px;
+      margin:0 auto;
+      padding:24px 18px 40px;
+    }
+
+    nav {
+      background:var(--paper);
+      box-shadow:var(--shadow);
+      border-radius:14px;
+      margin-bottom:22px;
+    }
+
+    nav .container {
+      max-width:800px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+
+    nav a {
+      text-decoration:none;
+      color:var(--text);
+      font-weight:700;
+    }
+
+    .content-card {
+      background:var(--paper);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      border-left:6px solid var(--pink);
+      padding:26px 28px 22px;
+    }
+
+    h1 {
+      margin:0 0 16px;
+      font-size:clamp(2rem, 4vw, 2.7rem);
+      line-height:1.25;
+      color:#385038;
+      letter-spacing:-0.02em;
+    }
+
+    p {
+      margin:0 0 1.2rem;
+      font-size:1.02rem;
+    }
+
+    .quote {
+      font-size:1.15rem;
+      font-style:italic;
+      color:var(--muted);
+      margin:0 0 0.4rem;
+    }
+
+    .attribution {
+      text-align:right;
+      margin-bottom:1.8rem;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .changes {
+      margin-top:2rem;
+      padding-top:1rem;
+      border-top:1px solid var(--line);
+      color:var(--text);
+    }
+
+    .changes p {
+      margin-bottom:0.7rem;
+    }
+
+    footer {
+      margin-top:2rem;
+      padding-top:1rem;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    footer p {
+      margin:0.35rem 0;
+    }
+
+    a {
+      color:#385038;
+      text-decoration:none;
+    }
+
+    a:hover {
+      text-decoration:underline;
+    }
+
+    @media (max-width:600px) {
+      .page-shell {
+        padding:18px 14px 36px;
+      }
+
+      .content-card {
+        padding:20px 16px 18px;
+      }
+
+      nav .container {
+        gap:14px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
- 
-<h1>What cross-sectional data can and cannot tell you?</h1>
- 
-<p class="quote">“As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened. A generation is becoming more anxious as it ages.”</p>
- 
-<p class="attribution">- From the National Health Statistics Center.</p>
- 
-<p>They drew a random sample of about 27,000 adults yearly, each one independent from year to year (no one is surveyed twice). They completed the interview once, asking questions regarding symptoms in the past 30 days. They reported the data for adults aged 18-25, which shows that their anxiety symptoms rose from 8.1% in 2014 to 14.7% in 2023, but they also noted that the survey mode shifted from in-person to a mix of phone and web interviewing in 2019.</p>
- 
-<p>This claim assumed that as young adults moved through their 20s, they are getting more anxious, but the design never established whether the passage of time caused anxiety to increase or identified what caused that increase in anxiety levels. Also, the interviewers did not follow the same people over the years, so we have no baseline for those interviewed in 2023, and we do not know the trend of anxiety in those interviewed in 2014. This is an issue in a cross-sectional study because, with this study, only a single glance is done. Cross-sectional studies can tell us how common something is, i.e., the anxiety rate, but they cannot tell us what caused the change or why it changed. The authors should have published this instead: “The prevalence of frequent anxiety symptoms among adults aged 18–25 increased from 8.1% in 2014 to 14.7% in 2023, while prevalence among adults aged 50–64 remained relatively stable”.</p>
- 
-<footer>
-<p>Chinenye Nwaweluozor</p>
-<p>PH 320 · Applied Biostatistics in Public Health</p>
-<p><a href="index.html">Home</a></p>
- 
-<div class="changes">
-<p><strong>Sentences changed by more than a word or two:</strong></p>
-<p>“As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened — a generation is becoming more anxious as it ages.” → “As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened. A generation is becoming more anxious as it ages.”</p>
-<p>“They drew a random sample of about 27,000 adults yearly, each one independent from year to year (no one is surveyed twice). They complete the interview once which is asking questions regarding symptoms in the past 30 days. They reported the data for adults aged 18-25 which shows that their anxiety symptoms rose from 8.1% in 2014 to 14.7% in 2023, but they also noted that the survey mode shifted from in-person to a mix of phone and web interviewing in 2019.” → “They drew a random sample of about 27,000 adults yearly, each one independent from year to year (no one is surveyed twice). They completed the interview once, asking questions regarding symptoms in the past 30 days. They reported the data for adults aged 18-25, which shows that their anxiety symptoms rose from 8.1% in 2014 to 14.7% in 2023, but they also noted that the survey mode shifted from in-person to a mix of phone and web interviewing in 2019.”</p>
-<p>“This claim assumed that as young adults moved through their 20s, they are getting more anxious, but the design never established whether time passage of time caused anxiety to increase or identify what caused that increase in anxiety levels. Also the interviewer didn’t follow the same people over the years, so we have no baseline for those interviewed in 2023, and we don’t know the trend of anxiety in those interviewed in 2014. This is an issue in cross-sectional study as with this study, only a single glance is done. Cross-sectional studies can tell us how common something is i.e: the anxiety rate, but it can’t tell us what caused the change or why it changed.” → “This claim assumed that as young adults moved through their 20s, they are getting more anxious, but the design never established whether the passage of time caused anxiety to increase or identified what caused that increase in anxiety levels. Also, the interviewers did not follow the same people over the years, so we have no baseline for those interviewed in 2023, and we do not know the trend of anxiety in those interviewed in 2014. This is an issue in a cross-sectional study because, with this study, only a single glance is done. Cross-sectional studies can tell us how common something is, i.e., the anxiety rate, but they cannot tell us what caused the change or why it changed.”</p>
-</div>
-</footer>
- 
-</div>
+  <div class="page-shell">
+    <nav>
+      <div class="container">
+        <a href="index.html">Home</a>
+        <a href="regression.html">Week 5</a>
+      </div>
+    </nav>
+
+    <main class="content-card">
+      <h1>What cross-sectional data can and cannot tell you?</h1>
+
+      <p class="quote">“As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened. A generation is becoming more anxious as it ages.”</p>
+      <p class="attribution">- From the National Health Statistics Center.</p>
+
+      <p>They drew a random sample of about 27,000 adults yearly, each one independent from year to year (no one is surveyed twice). They completed the interview once, asking questions regarding symptoms and health status.</p>
+
+      <p>This claim assumed that as young adults moved through their 20s, they are getting more anxious, but the design never established whether the passage of time caused anxiety to increase or if differences between age groups explain the pattern.</p>
+
+      <p>This is a cross-sectional study, which means it captures a snapshot of different people at one point in time. It can show that anxiety is associated with age or year, but it cannot tell us whether getting older caused anxiety to rise. The data do not follow the same people over time.</p>
+
+      <footer>
+        <p>Chinenye Nwaweluozor</p>
+        <p>PH 320 · Applied Biostatistics in Public Health</p>
+        <p><a href="index.html">Home</a></p>
+
+        <div class="changes">
+          <p><strong>Sentences changed by more than a word or two:</strong></p>
+          <p>“As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened — a generation is becoming more anxious as it ages.” → “As young adults moved through their twenties over the past decade, their anxiety worsened steadily, suggesting a generation is becoming more anxious as it ages.”</p>
+          <p>“They drew a random sample of about 27,000 adults yearly, each one independent from year to year (no one is surveyed twice). They complete the interview once which is asking questions regarding symptoms and health status.” → “They drew a random sample of about 27,000 adults each year, with each person independent from year to year. They completed the interview once, asking questions about symptoms and health status.”</p>
+          <p>“This claim assumed that as young adults moved through their 20s, they are getting more anxious, but the design never established whether time passage of time caused anxiety to increase or identify the difference between age groups.” → “This claim assumed that as young adults moved through their 20s, they were getting more anxious, but the design never established whether the passage of time caused anxiety to increase or whether differences between age groups explained the pattern.”</p>
+        </div>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
